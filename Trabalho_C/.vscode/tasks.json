@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar C",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-std=c99",
+        "-Wall",
+        "-pedantic",
+        "main.c",
+        "fila.c",
+        "persistencia.c",
+        "estatisticas.c",
+        "terminal.c",
+        "-o",
+        "main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
