@@ -4,7 +4,7 @@ Carlos Victor da Cruz Santos Matrícula: 2250204407
 Karolayne Silva Ramos Matrícula: 2250105638
 Naralicia Mendes Silva Souza Matrícula: 2250101912
 
-#######################################################################################################################
+****************************************************
 
 *Trabalho A: Playlist de Músicas-Listas Simples
 
@@ -60,7 +60,7 @@ O sistema exibirá a mensagem:
 Encerrando a NKC PLAYLIST.
 A principal dificuldade encontrada durante o desenvolvimento foi a configuração do ambiente de programação no Visual Studio Code, incluindo a instalação do compilador GCC (MinGW), configuração do terminal e execução correta do programa.
 
-#########################################################################################################################
+*****************************************************
 
 *Trabalho B: Chamadas de Emergência-Pilhas Simples
 
@@ -70,7 +70,7 @@ instruções para executar:
 observações sobre o funcionamento:
 dificuldades encontradas, se houver
 
-##########################################################################################################################
+********************************************************
 *Trabalho C: Fila de Impressão-Filas Simples
 
 explicação breve de cada programa:
