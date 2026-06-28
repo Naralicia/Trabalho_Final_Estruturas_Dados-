@@ -74,8 +74,67 @@ dificuldades encontradas, se houver
 *Trabalho C: Fila de Impressão-Filas Simples
 
 explicação breve de cada programa:
-instruções para compilar:
-instruções para executar:
-observações sobre o funcionamento:
-dificuldades encontradas, se houver
+
+Esse trabalho é um sistema de fila de impressão feito em C. A ideia é simular uma fila de impressão de verdade, igual tem em laboratório ou escritório. O diferencial é que ele tem duas filas: uma para trabalhos normais (capacidade 100) e uma fila circular para trabalhos prioritários (capacidade 50). A regra é simples: se tiver algo na fila prioritária, processa primeiro. Só vai para a fila normal se a prioritária estiver vazia.
+
+O usuário pode enfileirar trabalhos informando ID, nome do arquivo, páginas e tipo (N ou P). Também dá para listar as filas, buscar por ID, cancelar um trabalho específico e ver relatórios com estatísticas. Tudo salvo em CSV pra não perder os dados quando fechar o programa.
+
+O código foi dividido em módulos separados (.h e .c) para organizar melhor: fila, terminal (cores), persistência (CSV) e estatísticas.
+
+-instruções para compilar:
+
+Abra o terminal na pasta do projeto e execute:
+
+gcc -std=c99 -Wall -pedantic main.c fila.c persistencia.c estatisticas.c terminal.c -o main.exe
+Pré-requisito: Ter o GCC (MinGW) instalado no Windows.
+
+Pelo VS Code: Pressione Ctrl+Shift+B — a task de compilação já está configurada no .vscode/tasks.json e compila todos os arquivos automaticamente.
+
+-instruções para executar:
+
+Após compilar, execute no terminal:      
+
+.\main.exe
+
+O programa mostra um menu com as opções:
+
+Opção	Função
+1	Enfileirar trabalho
+2	Processar próximo
+3	Listar filas
+4	Buscar trabalho por ID
+5	Cancelar trabalho por ID
+6	Salvar dados (CSV)
+7	Relatórios e Estatísticas
+0	Sair
+Basta digitar o número e pressionar Enter.
+
+-observações sobre o funcionamento:
+
+Duas filas separadas: O sistema mantém uma fila normal (capacidade: 100) e uma fila circular prioritária (capacidade: 50)
+Prioridade: Trabalhos prioritários (tipo P) são sempre processados antes dos normais (tipo N). Só processa um normal se a fila prioritária estiver vazia
+ID único: Cada trabalho tem um ID que não pode se repetir. O programa valida na hora de enfileirar
+Validações: O programa verifica entradas inválidas (ID repetido, nome vazio, páginas negativas, tipo diferente de N/P)
+Persistência: Os dados ficam salvos mesmo depois de fechar o programa. Ao abrir novamente, as filas são restauradas
+Cores no terminal: O sistema usa cores para destacar mensagens (verde = sucesso, vermelho = erro, amarelo = aviso)
+Relatórios: A opção 7 mostra estatísticas como total de trabalhos, total de páginas, média, maior/menor trabalho, ocupação das filas e distribuição por tipo
+
+-Armazenamento dos Dados
+
+Os dados são salvos no arquivo fila_impressao.csv no formato:
+
+id;arquivo;paginas;tipo
+1;relatorio.pdf;10;N
+2;contrato.doc;3;P
+O separador é ; (ponto e vírgula)
+A primeira linha é o cabeçalho com os nomes dos campos
+Cada trabalho vira uma linha no arquivo
+O CSV pode ser aberto no Excel ou bloco de notas
+O programa carrega automaticamente ao iniciar e salva automaticamente ao sair (opção 0)
+Também é possível salvar manualmente pela opção 6 do menu
+
+-dificuldades encontradas:
+
+A maior dificuldade foi entender a fila circular com o operador %. No começo parecia confuso porque quando o fim chega na última posição ele volta pro início, e eu não conseguia visualizar isso direito.
+E com o CSV, a primeira execução o arquivo não existe e o programa precisa tratar isso sem fechar com erro. E se alguém editar o CSV manualmente e colocar dados errados, o programa precisa pular a linha inválida e continuar com as próximas.
 
