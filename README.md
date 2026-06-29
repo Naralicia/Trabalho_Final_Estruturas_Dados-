@@ -85,12 +85,12 @@ observações sobre o funcionamento:
 Ao executar o programa esse será o menu exibido:
 
  SISTEMA DE CHAMADAS DE EMERGENCIA (PILHA)              
-======================================================================
+________________________________________________________________________
  GUIA RAPIDO DE REFERENCIA DE EMERGENCIAS:
   * POLICIA MILITAR (190): Roubo, perturbacao do sossego, agressao.
   * BOMBEIROS (193): Incendio, vazamento de gas, resgate de animais.
   * SAMU (192): Parada cardiorrespiratoria, atropelamento, acidentes graves.
-----------------------------------------------------------------------
+________________________________________________________________________
 1. Registrar Chamada (Empilhar)
 2. Atender Chamada (Desempilhar)
 3. Consultar Ultima Chamada (Topo)
