@@ -84,7 +84,7 @@ observações sobre o funcionamento:
 
 Ao executar o programa esse será o menu exibido:
 
-SISTEMA DE CHAMADAS DE EMERGENCIA (PILHA)              
+ SISTEMA DE CHAMADAS DE EMERGENCIA (PILHA)              
 ======================================================================
  GUIA RAPIDO DE REFERENCIA DE EMERGENCIAS:
   * POLICIA MILITAR (190): Roubo, perturbacao do sossego, agressao.
