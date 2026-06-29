@@ -1,0 +1,19 @@
+# Build / output
+output/
+*.exe
+*.o
+*.obj
+
+# Editor files
+*.log
+.vscode/
+*.swp
+
+# System files
+Thumbs.db
+.DS_Store
+
+# Ignore compiled Python etc
+__pycache__/
+
+# Keep CSV files (do not ignore)
