@@ -64,11 +64,42 @@ A principal dificuldade encontrada durante o desenvolvimento foi a configuraçã
 
 *Trabalho B: Chamadas de Emergência-Pilhas Simples
 
-explicação breve de cada programa:
+explicação breve de cada programa: 
+Este programa foi desenvolvido em linguagem C com o objetivo de administrar um sistema de chamadas de emergência por meio da estrutura de dados Pilha Sequencial. O programa oferece as funcionalidades de inserir novas ocorrências, realizar o atendimento da chamada mais recente, visualizar o topo e listar os registros ativos, contando ainda com persistência de dados em um arquivo CSV.
+A lógica computacional baseia-se em um vetor de estruturas (structs) do tipo chamada, cujo gerenciamento de entrada e saída adota o conceito LIFO (Last In, First Out). Dessa forma, todas as operações de escrita e remoção acontecem obrigatoriamente no topo do vetor, assegurando que o último chamado reportado seja o primeiro a ser processado pela equipe.
+
 instruções para compilar:
-instruções para executar:
+Para realizar a compilação será necessário a instalação dos programas abaixo:
+- Visual Studio Code.
+- GCC (MINGW) para realizar a compilação em C.
+- extensão C/C++ dentro do vs conde.
+
+Com esse programas instalados execute o comando no terminal:
+gcc sistema.c -o sistema.exe
+
+instruções para executar: 
+Cole o comando: .\sistema.exe para executar.
+
 observações sobre o funcionamento:
-dificuldades encontradas, se houver
+
+Ao executar o programa esse será o menu exibido:
+
+SISTEMA DE CHAMADAS DE EMERGENCIA (PILHA)              
+======================================================================
+ GUIA RAPIDO DE REFERENCIA DE EMERGENCIAS:
+  * POLICIA MILITAR (190): Roubo, perturbacao do sossego, agressao.
+  * BOMBEIROS (193): Incendio, vazamento de gas, resgate de animais.
+  * SAMU (192): Parada cardiorrespiratoria, atropelamento, acidentes graves.
+----------------------------------------------------------------------
+1. Registrar Chamada (Empilhar)
+2. Atender Chamada (Desempilhar)
+3. Consultar Ultima Chamada (Topo)
+4. Listar Todas as Chamadas
+5. Salvar Dados (CSV)
+0. Sair do Programa
+
+Dificuldades:
+Tive dificuldades na preparação do ambiente, especialmente na instalação do gcc para poder executar o codigo corretamente.
 
 ********************************************************
 *Trabalho C: Fila de Impressão-Filas Simples
