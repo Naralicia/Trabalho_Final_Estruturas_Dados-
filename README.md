@@ -66,7 +66,7 @@ A principal dificuldade encontrada durante o desenvolvimento foi a configuraçã
 
 explicação breve de cada programa: 
 Este programa foi desenvolvido em linguagem C com o objetivo de administrar um sistema de chamadas de emergência por meio da estrutura de dados Pilha Sequencial. O programa oferece as funcionalidades de inserir novas ocorrências, realizar o atendimento da chamada mais recente, visualizar o topo e listar os registros ativos, contando ainda com persistência de dados em um arquivo CSV.
-A lógica computacional baseia-se em um vetor de estruturas (structs) do tipo chamada, cujo gerenciamento de entrada e saída adota o conceito LIFO (Last In, First Out). Dessa forma, todas as operações de escrita e remoção acontecem obrigatoriamente no topo do vetor, assegurando que o último chamado reportado seja o primeiro a ser processado pela equipe.
+A lógica computacional baseia-se em um vetor de estruturas (structs) do tipo chamada, cujo gerenciamento de entrada e saída adota o conceito LIFO (Last In, First Out). Dessa forma, todas as operações de escrita e remoção acontecem obrigatoriamente no topo do vetor, assegurando que o último chamado reportado seja o primeiro a ser processado.
 
 instruções para compilar:
 Para realizar a compilação será necessário a instalação dos programas abaixo:
